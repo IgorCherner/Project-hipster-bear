@@ -1,4 +1,5 @@
 /* --------------- reset.css --------------- */
+* {box-sizing: border-box;}
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -284,9 +285,9 @@ p.descr span.cpt {
   flex-wrap: wrap;
   justify-content: center;
 }
-/*form {*/
-  flex: 1 1 400px;
-}
+/*/*form {*/
+  /*flex: 1 1 400px;*/
+}*/
 .left {
   position: relative;
   margin-right: 20px;
@@ -395,7 +396,7 @@ section.products {
   position: relative;
   width: 100%;
   height: 1721px;
-  background: url(../images/bg4.jpg) no-repeat center;
+  background: url(../images/bg4.jpg) no-repeat, center;
   background-size: cover;
 }
 section.products .line {
@@ -408,19 +409,45 @@ section.products .line {
 .products .decor img {
 	margin-top: 96px;
 }
-.samples {
+.wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	margin-top: 52px;
 }
-.wrapper {
+.samples {
 	max-width: 318px;
+	margin: 0 auto;
 }
 .samples img {
-	margin: auto;
+	/*margin-bottom: 28px;*/
+}	
+/*------------------------effect------------------------------*/
+.hover_effect {
+	position: relative;
 	margin-bottom: 28px;
+ }
+.mask {
+  position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
-
+.mask a {
+	display: block;
+	border: 2px solid #E5AF88;
+  background: url(../images/targ.png) no-repeat center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.hover_effect:hover .mask {
+  background: rgba(0,0,0,.3);
+  padding: 10px;
+  transition: all .4s ease-in-out;
+} 
+.hover_effect:hover .mask a {
+	opacity: 1;
+}
 /*------------------section_5---------------------*/
 
 section.result {
@@ -521,20 +548,17 @@ section.work h2 {
 	color: #FFF;
 	text-align: left;
 }
-.work-act:after {
+.work-act p:after {
 	content: " ";
+	background: url(../images/arrows-work.png) no-repeat;
+	width: 17px;
+	height: 29px;
 	display: block;
 	position: absolute;
-	color: none;
-	right: -10px;
-	bottom: 30px;
-	width: 0px;
-	height: 0px;
-	border-left: 25px solid #FFA07A;
-	border-top: 20px solid transparent ;
-	border-bottom: 20px solid transparent;
+	right: -3px;
+	bottom: 42px;
 }
-.cell:first-child .board:after {
+.work-act:last-child p:after {
 	display: none;
 }
 /*-----------------section_7-------------------------*/
@@ -679,9 +703,11 @@ footer {
 	justify-content: space-between;
 }
 footer .logo {
-	line-height: 215px;
+	padding: 0 3px;
+	line-height: 230px;
 }
 footer .contact {
+	padding: 65px 3px;
   font-size: 0.875em;
   color: #eaeaea;
   font-weight: bold;
@@ -707,22 +733,39 @@ footer input.tel {
   cursor: pointer;
  }
  footer .icon-footer {
- 
+ 	margin-top: 5px;
+ 	text-align: right;
  }
- footer .icon_fb {
- 
+ footer .icon-footer i {
+  color: #fff;
+  margin-left: 10px; 
  }
- footer .icon_vk {
  
- }
- footer .icon_in {
- 
- }
  /*----------------------------gs----------------------------*/
  .gs {
- 	background: url(../images/bg gs.png) no-repeat center;
+ 	background: url(../images/bg-gs.png) no-repeat center;
  	height: 40px;
+ 	line-height: 40px;
  }
+ nav .menu li {
+  display: table-cell;
+  padding: 0 10px;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+ 	font-size: 0.75em;
+}
+ nav .menu li a {
+ 	display: block;
+ 	color:#656565;
+ 	text-decoration: none;
+}
+ nav .copyr {
+ 	height: 27px;
+ 	float: right;
+ 	padding-top: 6px;
+}
+ 	
+ 
 
 
 
